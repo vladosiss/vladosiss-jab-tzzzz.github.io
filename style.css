@@ -1,0 +1,20 @@
+
+/*sarch*/
+.col-10{
+    flex: 1 0 83.333333%;
+    max-width: 100.333333%;
+        display: -webkit-box;
+    margin: auto;
+    padding-bottom: 15px;
+}
+/*carusel*/
+ol.carousel-indicators li{
+    background-color: rgb(194, 156, 98);
+}
+
+
+
+
+
+
+

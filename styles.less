@@ -1,0 +1,279 @@
+/*company Colors*/
+@colorBlack:#151414;
+@colorOrange:#cb934b;
+@colorGray:#rgba(0,0,0,.15);
+/*main-heder*/
+.header{
+    width: auto;
+    height: 100px;
+    display: flex;
+    &__logo-img{
+          display: block;
+    max-width: 100%;
+    height: auto;
+    }
+    &__logo-text{
+        display: block;
+    margin-top: -15px;
+    color: @colorBlack;
+    text-decoration: none;
+    }
+    &__search{
+        display: flex;
+    }
+    &__form-shearh{
+        margin: auto;
+    width: 27rem;}
+    &__searh-find{
+    margin-left: -30px;
+    margin-top: 7px;
+        width: auto;}
+    &__contactInf{
+        display: flex;
+    }
+    &__contactInf-row{
+         width: 25rem;
+    height: 5rem;
+    float: left;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    }
+    &__contactInf-number{
+         float: left;
+    margin: auto;
+    display: inline-table;
+    }
+    &__contactInf-workTime{
+       margin: auto;
+    display: inline-table;}
+    &__contactInf-workTime_size{
+        color: @colorOrange;}
+    @media screen and (max-width:850px){
+     &__search.header__search-size{
+        display: none;}
+         &__contactInf.header__contactInf-size{
+           display: none;}
+          &__logo-ForPhone{
+              position: absolute;
+                top: 48px;
+                  left: 38px;}
+    }
+}
+/*Main-Menu*/
+.mainMenu{
+    &__topnav{
+    display: flex;
+    width: auto;
+    height:44px;
+    border-top: 1px solid #ced4da78;
+    border-bottom: 1px solid #ced4da78;
+    background-color: white;}
+    &__topnav li {
+    padding: 10px;
+    list-style: none;}
+    &__topnav li.mobail{
+    left: 20px;
+    position: relative;}
+    &__topnav li a{
+    text-decoration: none;
+   font-size: 13px;
+    text-transform: uppercase;
+    display: flex;
+    font-weight: bold;
+    color: #151414;}
+    &__shoppingCart{
+    right: 8px;
+    position: relative;}
+    &__icon-ten{
+        position: relative;
+        right: 4px;}
+    &__size-icon{
+    font-size: x-large;}
+    &__icon-size{
+        position: relative;}
+    &__activ-menu li.mainMenu__activ_menu-size a{
+   display: -webkit-box;
+    font-weight: 400;}
+    &__topnav li:hover{
+    background-color: #e9e9ea;}
+    &__activ-menu{
+       display: none;}
+    &__activ-iconForm{
+         display: none;}
+    &__topnav li:hover>ul&__activ-menu{
+          display: inline;
+            background: #fffffff2;
+            position: absolute;
+              margin-top: 14px;
+            width: 250px;
+          margin-left: -10px;
+         z-index: 2;
+       border-radius: 4px;}
+    /*input - круги перед текстом*/
+    &__topnav li:hover>ul.mainMenu__activ-menu li a i.fa{
+       color: #cf9c59;
+       font-size: xx-small;
+       position: relative;
+       right: 13px;
+       top: -1px;}
+    &__activ_menu-size a{
+        list-style: circle;
+    left: 200px;
+    color: #808080;
+    font-size: 12px;
+    font-weight: 400;
+        padding-left: 20px;}
+    /*навигация в меню - указатели*/
+    &__topnav li:hover>ul&__activ-menu li a i.fa.fa-chevron-right{
+        right: -10px;}
+    &__topnav li a i.fa.fa-chevron-right{
+        position: relative;
+        right: -3px;
+        top: 4.2px;}
+      &__topnav li:hover ul li.mainMenu__activ_menu-size{
+        margin: 0px 0px 0px -40px;
+        width: auto;}
+    &__activ-menu2{
+        display: none;}
+    &__activ-menu li:hover>ul&__activ-menu2{
+    display: inline;
+     background: #fffffff2;
+    position: absolute;
+    margin-top: -10px;
+    width: 230px;
+    margin-left: 241px;
+    border-radius: 4px;}
+    &__text-size{
+    font-size: 15px;
+    color: #cf9c59;}
+    /*transform*/
+    &__topnav li:hover a>i.rotate180cw{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);}
+    &__topnav li :hover a i.move-one-right{
+     transform: translate(30px,0);
+    -webkit-transform: translate(30px,0); 
+    -o-transform: translate(30px,0); 
+    -moz-transform: translate(30px,0); }
+    &__topnav li :hover a i.move-two-right{
+     transform: translate(30px,0);
+    -webkit-transform: translate(30px,0); 
+    -o-transform: translate(30px,0); 
+    -moz-transform: translate(30px,0); }
+    @media screen and (max-width:850px){
+        &{
+            position: relative;
+            top: -101px;
+        }
+        &__topnav li.icon{
+        display: inline;}
+        &__topnav li {
+        display: none;}
+        &__topnav{
+        background-color: #f0f1f6;}
+        &__activ-iconForm{
+           display: flex;
+           position: inherit;}
+/*создаем добавляеммый клас responsiv*/
+        &__topnav.responsive{
+        position: relative;
+         display: inline-table;
+    width: -webkit-fill-available;}
+        &__topnav.responsive>li.icon{
+        top: 0px;
+    right: 0px;}
+        &__topnav.responsive>li{
+        float: none;
+        display: block;
+        width: -webkit-fill-available;}
+        __topnav.responsive>li:hover>ul&__activ-menu{
+        display: inline-block;
+        margin-top: auto;
+        width: -webkit-fill-available;}
+    &__topnav.responsive>li:hover>ul&__activ-menu li&__activ_menu-size{
+        display: block;
+        width: -webkit-fill-available;}
+        &__topnav.responsive>li:hover>ul&__activ-menu li&__activ_menu-size:hover>ul&__activ-menu2{
+        width: -webkit-fill-available;
+    float: right;
+      margin-left: 38px;
+    background-color: antiquewhite;
+    top: 8px;}
+        &__topnav.responsive>li>a {
+        display: block;
+        text-align: left;}
+        &__topnav.responsive>li&__icon-activ{
+      display: inline-flex;}
+        &__topnav li&__icon-activ{
+    padding-left: 12px;
+    padding-top: 9px;
+    padding-right: 12px;}
+        &__topnav.responsive>li.mobail{
+    display: none;}
+        &__icon-size{
+        background-color: #3eade2;}
+        &__icon-size{
+        position: absolute;}
+        &__icon-activ>a&__size-icon{
+    font-size: x-large;}      
+    & i.fa{
+        color: #dbdbdc;
+    }
+    }
+}
+#carouselExampleIndicators{
+    & a.style-button{
+     width: 38px;
+    height: 123px;
+    margin: auto;
+    background-color: #ca9d67;}
+    & a.style-button-next{
+    width: 38px;
+    height: 123px;
+    margin: auto;
+    background-color: #ca9d67;}
+    @media screen and (max-width:850px){
+        & a.style-button{
+        width: 25px;
+        height: 27px;}
+        & a.style-button-next{
+        width: 25px;
+        height: 27px;}
+        & a.style-button-next{
+        width: 25px;
+        height: 27px;}
+        & img.slick-height-media{
+        height: 150px;}
+   }
+}
+@media screen and (max-width:850px){
+    .container{
+        width: fit-content; }
+    .container.container-styles{
+        padding: 0px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
